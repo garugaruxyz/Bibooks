@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Homepage</title>
+</head>
+<body>
+    <main class="container">
+        <h3>Books</h3>
+        <div class="grid">
+            <button type="button" th:onclick="window.location.href='/addBook'">Add Book</button>
+            <button type="button" th:onclick="window.location.href='/addBookCopy'">Add Book Copy</button>
+            <button type="button" th:onclick="window.location.href='/showBooks'">Show Books</button>
+            <button type="button" th:onclick="window.location.href='/removeBook'">Remove Book</button>
+            <button type="button" th:onclick="window.location.href='/showCopy'">Show copyBooks</button>
+        </div>
+        <h3>Users</h3>
+        <div class="grid">
+            <button type="button" th:onclick="window.location.href='/addUser'">Add User</button>
+            <button type="button" th:onclick="window.location.href='/showUsers'">Show Users</button>
+            <button type="button" th:onclick="window.location.href='/removeUser'">Remove User</button>
+            <div></div>
+            <div></div>
+        </div>
+    </main>
+</body>
+</html>

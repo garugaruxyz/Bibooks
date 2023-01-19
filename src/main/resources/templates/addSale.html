@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Add User</title>
+</head>
+<body>
+<header>
+    <button type="button" th:onclick="window.location.href='/'">INDEX</button>
+</header>
+<form id="myForm" action="/add" method="post">
+    <label for="userId">Buyer:</label><br>
+    <input type="text" id="userId" name="userId" required><br>
+
+    <label for="userId1">Seller :</label><br>
+    <input type="text" id="userId1" name="userId1" required><br>
+
+    <label for="status">Status:</label><br>
+    <input type="text" id="status" name="status" required><br>
+
+    <label for="editor">editor:</label><br>
+    <input type="text" id="editor" name="editor" required><br>
+
+    <label for="pages">pages:</label><br>
+    <input type="number" id="pages" name="pages" required><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

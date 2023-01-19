@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Show Book Copies</title>
+</head>
+<body>
+<header>
+    <button type="button" th:onclick="window.location.href='/'">INDEX</button>
+</header>
+<div>
+    <form id="myForm" action="/showCopy" method="get">
+        <label for="isbn">isbn:</label><br>
+        <input type="text" id="isbn" name="isbn" value=""><br>
+
+        <button type="submit">Search</button>
+    </form>
+    <ul th:each="bookC : ${books}">
+        <li><a th:text="${'isbn:'+bookC.book.isbn + ', copyId:' + bookC.copyId + ', status:' + bookC.status}"></a></li>
+    </ul>
+</div>
+</body>
+</html>

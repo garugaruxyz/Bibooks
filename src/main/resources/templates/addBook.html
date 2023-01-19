@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Add book</title>
+</head>
+<body>
+<header>
+    <button type="button" th:onclick="window.location.href='/'">INDEX</button>
+</header>
+<form id="myForm" action="/addBook" method="post">
+    <label for="isbn">isbn:</label><br>
+    <input type="text" id="isbn" name="isbn" required><br>
+
+    <label for="title">title:</label><br>
+    <input type="text" id="title" name="title" required><br>
+
+    <label for="author">author:</label><br>
+    <input type="text" id="author" name="author" required><br>
+
+    <label for="editor">editor:</label><br>
+    <input type="text" id="editor" name="editor" required><br>
+
+    <label for="pages">pages:</label><br>
+    <input type="number" id="pages" name="pages" required><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

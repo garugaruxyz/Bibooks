@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Homepage</title>
+</head>
+<body>
+<header>
+  <button type="button" th:onclick="window.location.href='/'">INDEX</button>
+</header>
+<div>
+  <ul th:each="book : ${books}">
+    <li><a th:href="@{/book/delete/{isbn}(isbn = ${book.isbn})}"
+           th:text="${'isbn:'+book.isbn + ', titolo:' + book.title}"></a></li>
+  </ul>
+</div>
+
+</body>
+</html>
